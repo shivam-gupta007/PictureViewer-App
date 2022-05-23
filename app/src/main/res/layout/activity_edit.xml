@@ -1,0 +1,102 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="20dp"
+        tools:context="ui.EditActivity">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image"
+            android:scaleType="centerCrop"
+            android:src="@drawable/demo_img"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".80" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/undoBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/blue_shade_2"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="undo"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/rotateBtn"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rotateBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/blue_shade_2"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="rotate"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toRightOf="@+id/undoBtn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cropBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue_shade_2"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="crop"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/saveBtn"
+            app:layout_constraintTop_toBottomOf="@+id/undoBtn" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/blue_shade_2"
+            android:paddingStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="10dp"
+            android:text="save"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/cropBtn"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rotateBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
